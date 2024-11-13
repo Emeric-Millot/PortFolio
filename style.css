@@ -1,0 +1,464 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+/* Section Responsive */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    background-color: #0b192e;
+}
+
+html {
+    font-size: 62.5%; /* Base 10px pour faciliter les calculs rem */
+    scroll-padding-top: 5rem;
+}
+
+body {
+    margin: 0;
+    padding-top: 5rem;
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: #0b192e;
+    color: white;
+    font-size: 1.8rem;
+}
+
+header {
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: #0b192e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 3rem;
+    color: #00FFF0;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+nav a {
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+    color: #00FFF0;
+    border-bottom: 3px solid #00FFF0;
+}
+
+section {
+    min-height: 100vh;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+section a {
+    color: #00FFF0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+section a:hover {
+    color: #00e5d5;
+    text-decoration: underline;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: #0b192e;
+}
+
+.home .home-content h1 {
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+span {
+    color: #00FFF0;
+}
+
+.home-content h3 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.home-content p {
+    font-size: 1.8rem;
+}
+
+.home-img img {
+    position: relative;
+    width: 26vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px solid #00FFF0;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.home-img img:hover {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid #00FFF0;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+    color: #00FFF0;
+}
+
+.social-icons a:hover {
+    transform: scale(1.3) translateY(-5px);
+    background-color: #00FFF0;
+    box-shadow: 0 0 25px #00FFF0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: black;
+    border-radius: 4rem;
+    font-size: 1.8rem;
+    color: #00FFF0;
+    font-weight: 600;
+    border: 2px solid #00FFF0;
+    transition: 0.3s ease;
+    cursor: pointer;
+    margin: 1rem 1rem;
+}
+
+.btn:hover {
+    transform: scale3d(1.03);
+    background-color: #00FFF0;
+    color: black;
+    box-shadow: 0 0 25px #00FFF0;
+}
+
+/* Autres styles */
+.about, .skills, .project, .contact, .experience {
+    background-color: #0b192e;
+    padding: 4rem;
+    border-radius: 1.5rem;
+    text-align: center;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.about h2, .skills h2, .project h2, .contact h2, .experience h2 {
+    margin-bottom: 2rem;
+    font-weight: 700;
+    color: #00FFF0;
+}
+
+.about p, .experience p, .contact p, .project li {
+    font-size: 1.8rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.experience {
+    padding: 4rem;
+    margin-bottom: 0rem;
+}
+
+.experience ul {
+    list-style: none;
+    padding-left: 2rem;
+}
+
+.experience li {
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+    padding: 1.5rem;
+    border: 1px solid #00FFF0;
+    border-radius: 1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.experience li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px #00FFF0;
+}
+
+.skills ul {
+    list-style-type: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+}
+
+.skills li {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+}
+
+.skills li i {
+    color: #00FFF0;
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.skills li span {
+    margin-top: 0.5rem;
+    color: white;
+}
+
+.project ul {
+    list-style: none;
+    padding: 0;
+}
+
+.project li {
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    border: 1px solid #00FFF0;
+    border-radius: 1rem;
+    transition: transform 0.3s;
+}
+
+.project li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px #00FFF0;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact input, .contact textarea {
+    padding: 1rem;
+    font-size: 1.8rem;
+    color: #ffffff;
+    background-color: #0b192e;
+    border: 1px solid #00FFF0;
+    border-radius: 0.5rem;
+}
+
+.contact button {
+    padding: 1rem;
+    font-size: 1.8rem;
+    color: #0b192e;
+    background-color: #00FFF0;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background-color: #00e5d5;
+}
+
+/* Navigation responsive */
+@media (max-width: 995px) {
+    nav {
+        position: fixed;
+        top: 5rem;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background-color: rgba(11, 25, 46, 0.95);
+        padding: 2rem;
+        transition: 0.5s ease;
+        backdrop-filter: blur(10px);
+    }
+
+    nav.active {
+        right: 0;
+    }
+
+    nav a {
+        display: block;
+        margin: 2rem 0;
+        padding: 1rem 2rem;
+        font-size: 1.8rem;
+        border-left: 3px solid transparent;
+    }
+
+    nav a:hover,
+    nav a.active {
+        border-left: 3px solid #00FFF0;
+        border-bottom: none;
+        background-color: rgba(0, 255, 240, 0.1);
+    }
+}
+
+/* Mobile - Petit écran */
+@media (max-width: 480px) {
+    html {
+        font-size: 55%;
+    }
+
+    header {
+        padding: 1rem 5%;
+    }
+
+    .logo {
+        font-size: 2.5rem;
+    }
+
+    .home {
+        padding: 2rem 5%;
+        flex-direction: column-reverse;
+        gap: 3rem;
+    }
+
+    .home-content h1 {
+        font-size: 3.5rem;
+    }
+
+    .home-content h3 {
+        font-size: 2.5rem;
+    }
+
+    .home-img img {
+        width: 80vw;
+    }
+
+    .skills ul {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .about, .skills, .project, .contact, .experience {
+        padding: 2rem;
+    }
+
+    .social-icons a {
+        width: 3.5rem;
+        height: 3.5rem;
+        font-size: 1.8rem;
+    }
+
+    .experience ul {
+        padding-left: 0;
+    }
+
+    .contact form {
+        padding: 0 1rem;
+    }
+
+    .btn {
+        padding: 0.8rem 2rem;
+        font-size: 1.6rem;
+    }
+}
+
+/* Mobile - Moyen écran */
+@media (min-width: 481px) and (max-width: 768px) {
+    html {
+        font-size: 58%;
+    }
+
+    .home {
+        padding: 2rem 8%;
+        flex-direction: column-reverse;
+        gap: 4rem;
+    }
+
+    .home-content h1 {
+        font-size: 4rem;
+    }
+
+    .home-img img {
+        width: 65vw;
+    }
+
+    .skills ul {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .contact input,
+    .contact textarea {
+        width: 100%;
+    }
+
+    .experience ul {
+        padding-left: 1rem;
+    }
+}
+
+/* Tablette */
+@media (min-width: 769px) and (max-width: 1024px) {
+    html {
+        font-size: 60%;
+    }
+
+    .home {
+        padding: 2rem 10%;
+        gap: 5rem;
+    }
+
+    .home-content h1 {
+        font-size: 5rem;
+    }
+
+    .home-img img {
+        width: 45vw;
+    }
+
+    .skills ul {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Desktop */
+@media (min-width: 1025px) and (max-width: 1200px) {
+    .home-img img {
+        width: 35vw;
+    }
+}
+
+/* Large Desktop */
+@media (min-width: 1201px) {
+    .home-content h1 {
+        font-size: 6rem;
+    }
+
+    .home-img img {
+        width: 26vw;
+    }
+}
